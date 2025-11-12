@@ -39,3 +39,22 @@ const nomiEFalli = squadre.map(({ nome, falli }) => ({ nome, falli }));
 
 console.log("Tutte le squadre:", squadre);
 console.log("Nomi e falli:", nomiEFalli);
+
+// SNACK 3: Funzione intervallo di elementi
+function arrayIntervallo(arr, a, b) {
+  const nuovoArray = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (i >= a && i <= b) {
+      nuovoArray.push(arr[i]);
+    }
+  }
+
+  return nuovoArray;
+}
+
+// Esempio d’uso
+const numeri = [10, 20, 30, 40, 50, 60, 70];
+const risultato = arrayIntervallo(numeri, 2, 5);
+console.log("Array originale:", numeri);
+console.log("Nuovo array (posizioni 2-5):", risultato);
